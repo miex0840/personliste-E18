@@ -15,16 +15,16 @@
     <template class="data-template">
         <article>
             <h2></h2>
-            <p class="data-github"></p>
-            <p class="data-website"></p>
-          <p class="data-mail"></p>
-          <p class="data-adresse"></p>
-          <p class="data-alder"></p>
-          <p class="data-civilstatus"></p>
-          <p class="data-tlf"></p>
-          <p class="data-facebook"></p>
-          <p class="data-hobby"></p>
-          <p class="data-sex"></p>
+            <p class="data-github">Github: </p>
+            <p class="data-website">Website: </p>
+            <p class="data-mail">Mail: </p>
+            <p class="data-adresse">Adresse: </p>
+            <p class="data-alder">Alder: </p>
+            <p class="data-civilstatus">Civilstatus: </p>
+            <p class="data-tlf">Tlf: </p>
+            <p class="data-facebook">Facebook: </p>
+            <p class="data-hobby">Hobby: </p>
+            <p class="data-sex">Køn: </p>
             <img src="" alt="">
         </article>
     </template>
@@ -54,16 +54,16 @@
                 let klon = temp.cloneNode(true).content;
                 // indsæt data i html
                 klon.querySelector("h2").textContent = person.navn;
-                klon.querySelector(".data-github").textContent = person.github;
-                klon.querySelector(".data-website").textContent = person.website;
-                klon.querySelector(".data-mail").textContent = person.mail;
-                klon.querySelector(".data-adresse").textContent = person.adresse;
-                klon.querySelector(".data-alder").textContent = person.alder;
-                klon.querySelector(".data-civilstatus").textContent = person.civilstatus;
-                klon.querySelector(".data-tlf").textContent = person.tlf;
-                klon.querySelector(".data-facebook").textContent = person.facebook;
-                klon.querySelector(".data-hobby").textContent = person.hobby;
-                klon.querySelector(".data-sex").textContent = person.sex;
+                klon.querySelector(".data-github").textContent += person.github;
+                klon.querySelector(".data-website").textContent += person.website;
+                klon.querySelector(".data-mail").textContent += person.mail;
+                klon.querySelector(".data-adresse").textContent += person.adresse;
+                klon.querySelector(".data-alder").textContent += person.alder;
+                klon.querySelector(".data-civilstatus").textContent += person.civilstatus;
+                klon.querySelector(".data-tlf").textContent += person.tlf;
+                klon.querySelector(".data-facebook").textContent += person.facebook;
+                klon.querySelector(".data-hobby").textContent += person.hobby;
+                klon.querySelector(".data-sex").textContent += person.sex;
                 klon.querySelector("img").src = person.billede;
                 // placer klon i html
                 modtager.appendChild(klon);
